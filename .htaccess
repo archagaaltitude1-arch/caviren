@@ -1,0 +1,57 @@
+DirectoryIndex index.html
+
+Options -Indexes -MultiViews
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+  AddType text/html .html
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType image/jpeg .jpg .jpeg
+  AddType image/png .png
+  AddType image/svg+xml .svg
+  AddType video/mp4 .mp4
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^private(/|$) - [F,L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteCond %{REQUEST_URI} \.[A-Za-z0-9]{1,5}$
+  RewriteRule ^ - [R=404,L]
+
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(css|js|jpg|jpeg|mp4)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

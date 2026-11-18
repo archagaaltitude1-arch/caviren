@@ -1,0 +1,3 @@
+node_modules/
+private/recaptcha.php
+dist/private/recaptcha.php
