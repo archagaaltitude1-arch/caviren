@@ -6,6 +6,9 @@
   <title>Caviren - Operational Production Workspace</title>
   <link rel="icon" href="public/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -38,46 +41,54 @@
   <main id="top">
     <!-- ====================== SECTION 1: Product Hero ====================== -->
     <section class="product-hero">
-      <div class="hero-eyebrow">OPERATIONAL PRODUCTION WORKSPACE</div>
-      <h1>Centralized Control for Modern Video & Virtual Production</h1>
-      <p>Manage video production projects, organize creative assets, structure scene and shot records, and coordinate review approvals through one structured Laravel and SQL workspace built for studio teams.</p>
-      <div class="hero-actions">
-        <a href="/dashboard" class="btn btn-primary">Launch Workspace</a>
-        <a href="#architecture" class="btn btn-secondary scroll-to">Explore Architecture</a>
+      <div class="wrap">
+        <div class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>OPERATIONAL PRODUCTION WORKSPACE</div>
+        <h1>Centralized Control for Modern Video &amp; Virtual Production</h1>
+        <p class="lede">Manage video production projects, organize creative assets, structure scene and shot records, and coordinate review approvals through one structured Laravel and SQL workspace built for studio teams.</p>
+        <div class="hero-actions">
+          <a href="/dashboard" class="btn btn-primary">
+            Launch Workspace
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a href="#architecture" class="btn btn-secondary scroll-to">Explore Architecture</a>
+        </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 2: Product Overview ====================== -->
     <section class="product-overview" id="architecture">
-      <div class="section-eyebrow">PRODUCT OVERVIEW</div>
-      <h2>Built to Replace Fragmented Production Tracking</h2>
-      <p>Media and virtual production teams struggle with disconnected asset folders, untracked scene revisions, delayed stakeholder sign-offs, and limited cross-stage visibility. Caviren centralizes those records into a single relational system, replacing spreadsheets and siloed tools with a structured workflow designed for studio collaboration.</p>
-      <div class="card-grid-2x2">
-        <div class="card">
-          <h3>Unified Production Registry</h3>
-          <p>Replaces scattered spreadsheets with structured project records, stage tracking, deadlines, and clear ownership.</p>
-        </div>
-        <div class="card">
-          <h3>Structured Asset Metadata</h3>
-          <p>Centralizes images, video plates, and production files with categorization and direct project association.</p>
-        </div>
-        <div class="card">
-          <h3>Scene & Shot Continuity</h3>
-          <p>Links individual scenes and ordered shot sequences directly to projects and assigned production tasks.</p>
-        </div>
-        <div class="card">
-          <h3>Traceable Review Cycles</h3>
-          <p>Consolidates creative feedback, revision requests, approval decisions, and audit history in one queue.</p>
+      <div class="wrap">
+        <div class="section-eyebrow">PRODUCT OVERVIEW</div>
+        <h2>Built to Replace Fragmented Production Tracking</h2>
+        <p>Media and virtual production teams struggle with disconnected asset folders, untracked scene revisions, delayed stakeholder sign-offs, and limited cross-stage visibility. Caviren centralizes those records into a single relational system, replacing spreadsheets and siloed tools with a structured workflow designed for studio collaboration.</p>
+        <div class="card-grid-2x2">
+          <div class="card">
+            <h3>Unified Production Registry</h3>
+            <p>Replaces scattered spreadsheets with structured project records, stage tracking, deadlines, and clear ownership.</p>
+          </div>
+          <div class="card">
+            <h3>Structured Asset Metadata</h3>
+            <p>Centralizes images, video plates, and production files with categorization and direct project association.</p>
+          </div>
+          <div class="card">
+            <h3>Scene &amp; Shot Continuity</h3>
+            <p>Links individual scenes and ordered shot sequences directly to projects and assigned production tasks.</p>
+          </div>
+          <div class="card">
+            <h3>Traceable Review Cycles</h3>
+            <p>Consolidates creative feedback, revision requests, approval decisions, and audit history in one queue.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 3: Core Product Modules ====================== -->
     <section class="core-modules">
-      <div class="section-eyebrow">CORE MODULES</div>
-      <h2>Six Integrated Operational Modules</h2>
-      <p>Every module operates on shared relational project records across the Caviren web application.</p>
-      <div class="card-grid-3x2">
+      <div class="wrap">
+        <div class="section-eyebrow">CORE MODULES</div>
+        <h2>Six Integrated Operational Modules</h2>
+        <p>Every module operates on shared relational project records across the Caviren web application.</p>
+        <div class="card-grid-3x2">
         <article class="module-card">
           <div class="badge">01</div>
           <span class="status-pill">IMPLEMENTED</span>
@@ -114,94 +125,99 @@
           <h3>Production Analytics Dashboard</h3>
           <p>Provide real-time operational visibility into production health and bottlenecks. Manages active project counts, total scenes and shots, pending tasks, asset distribution, review statuses, and project completion summaries. Aggregates live SQL records across all five operational modules.</p>
         </article>
+        </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 4: Interactive Workspace Preview ====================== -->
     <section class="workspace-preview">
-      <div class="section-eyebrow">INTERACTIVE WORKSPACE PREVIEW</div>
-      <h2>Inside the Caviren Production Workspace</h2>
-      <span class="disclaimer-badge">ILLUSTRATIVE SAMPLE DATA — FRONTEND PREVIEW</span>
-      <div class="tabs-controls">
-        <button class="tab-btn active" data-tab="scenes">Scene & Shot Breakdown</button>
-        <button class="tab-btn" data-tab="assets">Creative Asset Registry</button>
-        <button class="tab-btn" data-tab="reviews">Review & Approval Queue</button>
-      </div>
-      <div class="tab-content active" id="scenes-content">
-        <div class="filter-controls">
-          <button class="filter-all active">All</button>
-          <button class="filter-inprogress">In Progress</button>
-          <button class="filter-inreview">In Review</button>
-          <button class="filter-approved">Approved</button>
+      <div class="wrap">
+        <div class="section-eyebrow">INTERACTIVE WORKSPACE PREVIEW</div>
+        <h2>Inside the Caviren Production Workspace</h2>
+        <span class="disclaimer-badge">ILLUSTRATIVE SAMPLE DATA — FRONTEND PREVIEW</span>
+        <div class="tabs-controls">
+          <button class="tab-btn active" data-tab="scenes">Scene &amp; Shot Breakdown</button>
+          <button class="tab-btn" data-tab="assets">Creative Asset Registry</button>
+          <button class="tab-btn" data-tab="reviews">Review &amp; Approval Queue</button>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Shot</th>
-              <th>Owner</th>
-              <th>Stage</th>
-              <th>Assets</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="sample-row">
-              <td>SC-01 / Shot 01A — Orbital Greenhouse Plate</td>
-              <td>Lead Artist</td>
-              <td>In Progress</td>
-              <td>4</td>
-              <td><span class="status-badge status-active">Active</span></td>
-            </tr>
-            <tr class="sample-row">
-              <td>SC-01 / Shot 01B — Wet Lens Tracking Pass</td>
-              <td>Compositor</td>
-              <td>In Review</td>
-              <td>2</td>
-              <td><span class="status-badge status-review">Review</span></td>
-            </tr>
-            <tr class="sample-row">
-              <td>SC-02 / Shot 02A — Blue-Hour Exterior Composite</td>
-              <td>Lead Artist</td>
-              <td>Approved</td>
-              <td>7</td>
-              <td><span class="status-badge status-completed">Completed</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-content" id="assets-content" style="display:none;">
-        <div class="asset-grid">
-          <article class="asset-card">
-            <span class="asset-category">Video Plate</span>
-            <h4>Orbital Greenhouse Plate</h4>
-            <p>Project PV-001 · Uploaded by Lead Editor</p>
-          </article>
-          <article class="asset-card">
-            <span class="asset-category">3D Environment Reference</span>
-            <h4>Cityscape HDRi</h4>
-            <p>Project PV-003 · Uploaded by Production Manager</p>
-          </article>
-          <article class="asset-card">
-            <span class="asset-category">Concept Frame</span>
-            <h4>Character Sketch Set</h4>
-            <p>Project PV-012 · Uploaded by Lead Artist</p>
-          </article>
+        <div class="tab-content active" id="scenes-content">
+          <div class="filter-controls">
+            <button class="filter-btn filter-all active">All</button>
+            <button class="filter-btn filter-inprogress">In Progress</button>
+            <button class="filter-btn filter-inreview">In Review</button>
+            <button class="filter-btn filter-approved">Approved</button>
+          </div>
+          <div class="table-wrap">
+            <table class="sample-table">
+              <thead>
+                <tr>
+                  <th>Shot</th>
+                  <th>Owner</th>
+                  <th>Stage</th>
+                  <th>Assets</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="sample-row">
+                  <td>SC-01 / Shot 01A — Orbital Greenhouse Plate</td>
+                  <td>Lead Artist</td>
+                  <td>In Progress</td>
+                  <td>4</td>
+                  <td><span class="status-badge status-active">Active</span></td>
+                </tr>
+                <tr class="sample-row">
+                  <td>SC-01 / Shot 01B — Wet Lens Tracking Pass</td>
+                  <td>Compositor</td>
+                  <td>In Review</td>
+                  <td>2</td>
+                  <td><span class="status-badge status-review">Review</span></td>
+                </tr>
+                <tr class="sample-row">
+                  <td>SC-02 / Shot 02A — Blue-Hour Exterior Composite</td>
+                  <td>Lead Artist</td>
+                  <td>Approved</td>
+                  <td>7</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      <div class="tab-content" id="reviews-content" style="display:none;">
-        <div class="review-panel">
-          <div class="review-submission">
-            <h4>Shot Review — SC-01 / Shot 01B</h4>
-            <p>Reviewer: Senior Reviewer</p>
-            <p>Status: <span class="status-approved">Approved</span></p>
-            <div class="feedback-notes">
-              <p><strong>Feedback:</strong> Lighting balance needs adjustment in the wet lens area.</p>
-              <p><strong>Revision:</strong> Requested revision on color grading.</p>
-            </div>
-            <div class="approval-history">
-              <p>Initial submission: Day 3</p>
-              <p>Revision requested: Day 7</p>
-              <p>Final approval: Day 10</p>
+        <div class="tab-content" id="assets-content" style="display:none;">
+          <div class="asset-grid">
+            <article class="asset-card">
+              <span class="asset-category">Video Plate</span>
+              <h4>Orbital Greenhouse Plate</h4>
+              <p>Project PV-001 · Uploaded by Lead Editor</p>
+            </article>
+            <article class="asset-card">
+              <span class="asset-category">3D Environment Reference</span>
+              <h4>Cityscape HDRi</h4>
+              <p>Project PV-003 · Uploaded by Production Manager</p>
+            </article>
+            <article class="asset-card">
+              <span class="asset-category">Concept Frame</span>
+              <h4>Character Sketch Set</h4>
+              <p>Project PV-012 · Uploaded by Lead Artist</p>
+            </article>
+          </div>
+        </div>
+        <div class="tab-content" id="reviews-content" style="display:none;">
+          <div class="review-panel">
+            <div class="review-submission">
+              <h4>Shot Review — SC-01 / Shot 01B</h4>
+              <p>Reviewer: Senior Reviewer</p>
+              <p>Status: <span class="status-approved">Approved</span></p>
+              <div class="feedback-notes">
+                <p><strong>Feedback:</strong> Lighting balance needs adjustment in the wet lens area.</p>
+                <p><strong>Revision:</strong> Requested revision on color grading.</p>
+              </div>
+              <div class="approval-history">
+                <p>Initial submission: Day 3</p>
+                <p>Revision requested: Day 7</p>
+                <p>Final approval: Day 10</p>
+              </div>
             </div>
           </div>
         </div>
@@ -210,9 +226,10 @@
 
     <!-- ====================== SECTION 5: End-to-End Production Workflow ====================== -->
     <section class="operational-workflow">
-      <div class="section-eyebrow">OPERATIONAL WORKFLOW</div>
-      <h2>Structured Progression from Setup to Final Sign-Off</h2>
-      <div class="workflow-steps">
+      <div class="wrap">
+        <div class="section-eyebrow">OPERATIONAL WORKFLOW</div>
+        <h2>Structured Progression from Setup to Final Sign-Off</h2>
+        <div class="workflow-steps">
         <div class="step">
           <div class="step-number">01</div>
           <h3>Initialize Project</h3>
@@ -235,46 +252,50 @@
         </div>
         <div class="step">
           <div class="step-number">05</div>
-          <h3>Review & Approve</h3>
+          <h3>Review &amp; Approve</h3>
           <p>Submit deliverables to Reviewers, log structured feedback, iterate on revisions, and lock final approvals.</p>
+        </div>
         </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 6: Technical Architecture ====================== -->
     <section class="technical-architecture">
-      <div class="section-eyebrow">SYSTEM ARCHITECTURE</div>
-      <h2>Modular Laravel & SQL Application Architecture</h2>
-      <p>Engineered for relational data integrity, role-based access control, and structured workflow state management.</p>
-      <div class="architecture-layers">
-        <div class="layer">
-          <div class="layer-label">Layer 1</div>
-          <div class="layer-desc">Presentation Layer: Responsive Web Interface (Blade / HTML5 / CSS3 / Modular UI Components) providing dashboards, registry tables, scene trackers, and review queues across desktop and mobile viewports.</div>
+      <div class="wrap">
+        <div class="section-eyebrow">SYSTEM ARCHITECTURE</div>
+        <h2>Modular Laravel &amp; SQL Application Architecture</h2>
+        <p class="section-lead">Engineered for relational data integrity, role-based access control, and structured workflow state management.</p>
+        <div class="architecture-layers">
+          <div class="layer">
+            <div class="layer-label">Layer 1</div>
+            <div class="layer-desc">Presentation Layer: Responsive Web Interface (Blade / HTML5 / CSS3 / Modular UI Components) providing dashboards, registry tables, scene trackers, and review queues across desktop and mobile viewports.</div>
+          </div>
+          <div class="layer">
+            <div class="layer-label">Layer 2</div>
+            <div class="layer-desc">Application &amp; Access Control Layer: PHP / Laravel MVC controllers, request validation, workflow state transitions, and Role-Based Access Control (Administrator, Production Manager, Editor, Reviewer).</div>
+          </div>
+          <div class="layer">
+            <div class="layer-label">Layer 3</div>
+            <div class="layer-desc">Domain &amp; Workflow Services: Relational business logic governing Project Registries, Asset Metadata Indexing, Scene/Shot Sequencing, Task Assignment, Review/Approval Histories, and Analytics Aggregation.</div>
+          </div>
+          <div class="layer">
+            <div class="layer-label">Layer 4</div>
+            <div class="layer-desc">Structured Data Layer: Relational SQL Database storing normalized records for users, roles, projects, scenes, shots, creative assets, tasks, review comments, and activity logs.</div>
+          </div>
         </div>
-        <div class="layer">
-          <div class="layer-label">Layer 2</div>
-          <div class="layer-desc">Application & Access Control Layer: PHP / Laravel MVC controllers, request validation, workflow state transitions, and Role-Based Access Control (Administrator, Production Manager, Editor, Reviewer).</div>
+        <div class="architecture-callout">
+          <p>The current architecture executes core production management workflows natively in PHP/Laravel and SQL, with future compute and virtual production layers evaluated separately.</p>
         </div>
-        <div class="layer">
-          <div class="layer-label">Layer 3</div>
-          <div class="layer-desc">Domain & Workflow Services: Relational business logic governing Project Registries, Asset Metadata Indexing, Scene/Shot Sequencing, Task Assignment, Review/Approval Histories, and Analytics Aggregation.</div>
-        </div>
-        <div class="layer">
-          <div class="layer-label">Layer 4</div>
-          <div class="layer-desc">Structured Data Layer: Relational SQL Database storing normalized records for users, roles, projects, scenes, shots, creative assets, tasks, review comments, and activity logs.</div>
-        </div>
-      </div>
-      <div class="architecture-callout">
-        <p>The current architecture executes core production management workflows natively in PHP/Laravel and SQL, with future compute and virtual production layers evaluated separately.</p>
       </div>
     </section>
 
     <!-- ====================== SECTION 7: Proposed NVIDIA Technology Foundation ====================== -->
     <section class="nvidia-foundation">
-      <div class="section-eyebrow">PROPOSED TECHNOLOGY FOUNDATION</div>
-      <h2>Architectural Alignment for Next-Generation Virtual & Generative Workflows</h2>
-      <p>The following NVIDIA technologies represent proposed architectural options under evaluation for future virtual production and AI-assisted media pipelines. None are active in the current MVP.</p>
-      <div class="tech-grid">
+      <div class="wrap">
+        <div class="section-eyebrow">PROPOSED TECHNOLOGY FOUNDATION</div>
+        <h2>Architectural Alignment for Next-Generation Virtual &amp; Generative Workflows</h2>
+        <p class="section-lead">The following NVIDIA technologies represent proposed architectural options under evaluation for future virtual production and AI-assisted media pipelines. None are active in the current MVP.</p>
+        <div class="tech-grid">
         <article class="tech-card">
           <span class="badge-proposed">PROPOSED</span>
           <h3>NVIDIA Cosmos</h3>
@@ -300,15 +321,17 @@
           <h3>NVIDIA RTX</h3>
           <p>Proposed GPU-accelerated graphics and ray-tracing hardware foundation designed to support high-fidelity visual rendering in future virtual production pipelines.</p>
         </article>
+        </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 8: Governance & Enterprise Readiness ====================== -->
     <section class="governance-readiness">
-      <div class="section-eyebrow">GOVERNANCE & CONTROL</div>
-      <h2>Operational Accountability Across Every Production Stage</h2>
-      <p>Built-in record governance ensures studios maintain clear ownership, controlled access, and verifiable decision trails.</p>
-      <div class="governance-pillars">
+      <div class="wrap">
+        <div class="section-eyebrow">GOVERNANCE &amp; CONTROL</div>
+        <h2>Operational Accountability Across Every Production Stage</h2>
+        <p class="section-lead">Built-in record governance ensures studios maintain clear ownership, controlled access, and verifiable decision trails.</p>
+        <div class="governance-pillars">
         <div class="pillar">
           <div class="pillar-icon">🔐</div>
           <h3>Role-Based Access Control (RBAC)</h3>
@@ -334,15 +357,17 @@
           <h3>Project-Scoped Record Isolation</h3>
           <p>Organizes scenes, shots, tasks, and files strictly under structured project boundaries.</p>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 9: Advanced Technology Roadmap ====================== -->
     <section class="technology-roadmap">
-      <div class="section-eyebrow">TECHNOLOGY ROADMAP</div>
-      <h2>Advanced Technology Roadmap — Q3–Q4 Plan</h2>
-      <p>Planned Milestones & Development Stages.</p>
-      <div class="roadmap-bg">
+      <div class="wrap">
+        <div class="section-eyebrow">TECHNOLOGY ROADMAP</div>
+        <h2>Advanced Technology Roadmap — Q3–Q4 Plan</h2>
+        <p class="section-lead">Planned Milestones &amp; Development Stages.</p>
+        <div class="roadmap-bg">
         <div class="roadmap-grid">
           <article class="roadmap-card">
             <span class="badge-planned">PLANNED</span>
@@ -377,42 +402,48 @@
           <article class="roadmap-card">
             <span class="badge-planned">PLANNED</span>
             <div class="card-number">06</div>
-            <h3>NVIDIA Cosmos & NIM Inference Architecture Assessment</h3>
+            <h3>NVIDIA Cosmos &amp; NIM Inference Architecture Assessment</h3>
             <p>Evaluate standardized inference workflows using NVIDIA NIM and world-model concepts via NVIDIA Cosmos for future AI-assisted pre-visualization.</p>
           </article>
+        </div>
         </div>
       </div>
     </section>
 
     <!-- ====================== SECTION 10: Production Environments & Final CTA ====================== -->
     <section class="production-environments">
-      <div class="section-eyebrow">PRODUCTION ENVIRONMENTS</div>
-      <h2>Designed for Structured Media Teams</h2>
-      <div class="env-grid">
-        <article class="env-card">
-          <h3>Film & Television Production</h3>
-          <p>Coordinate episodic or feature scene breakdowns, shot sequences, and multi-department review cycles.</p>
-        </article>
-        <article class="env-card">
-          <h3>Advertising Agencies</h3>
-          <p>Manage campaign deliverables, client revision rounds, and fast-turnaround creative approvals.</p>
-        </article>
-        <article class="env-card">
-          <h3>Digital Content Creation</h3>
-          <p>Centralize recurring video pipelines, asset libraries, and task assignments across creators and editors.</p>
-        </article>
-        <article class="env-card">
-          <h3>Virtual Production Studios</h3>
-          <p>Organize virtual scene records, plate assets, and technical production workflows in one registry.</p>
-        </article>
-      </div>
-      <div class="cta-banner">
-        <div class="cta-content">
-          <h3>Bring Your Production Workflow Into Focus</h3>
-          <p>Explore the Caviren workspace or connect with our team to discuss a studio pilot.</p>
-          <div class="cta-actions">
-            <a href="/dashboard" class="btn btn-primary">Open Application</a>
-            <a href="index.html#demo" class="btn btn-secondary">View Demo</a>
+      <div class="wrap">
+        <div class="section-eyebrow">PRODUCTION ENVIRONMENTS</div>
+        <h2>Designed for Structured Media Teams</h2>
+        <div class="env-grid">
+          <article class="env-card">
+            <h3>Film &amp; Television Production</h3>
+            <p>Coordinate episodic or feature scene breakdowns, shot sequences, and multi-department review cycles.</p>
+          </article>
+          <article class="env-card">
+            <h3>Advertising Agencies</h3>
+            <p>Manage campaign deliverables, client revision rounds, and fast-turnaround creative approvals.</p>
+          </article>
+          <article class="env-card">
+            <h3>Digital Content Creation</h3>
+            <p>Centralize recurring video pipelines, asset libraries, and task assignments across creators and editors.</p>
+          </article>
+          <article class="env-card">
+            <h3>Virtual Production Studios</h3>
+            <p>Organize virtual scene records, plate assets, and technical production workflows in one registry.</p>
+          </article>
+        </div>
+        <div class="cta-banner">
+          <div class="cta-content">
+            <h3>Bring Your Production Workflow Into Focus</h3>
+            <p>Explore the Caviren workspace or connect with our team to discuss a studio pilot.</p>
+            <div class="cta-actions">
+              <a href="/dashboard" class="btn btn-primary">
+                Open Application
+                <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </a>
+              <a href="index.html#demo" class="btn btn-secondary">View Demo</a>
+            </div>
           </div>
         </div>
       </div>
@@ -420,8 +451,8 @@
   </main>
 
   <footer class="site-footer">
-    <div class.footer-wrapper>
-      <div class.footer-cols>
+    <div class="footer-wrapper">
+      <div class="footer-cols">
         <div class="footer-col">
           <h4>Caviren</h4>
           <p>Operational Production Workspace for video production & virtual production management.</p>
